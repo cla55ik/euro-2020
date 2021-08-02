@@ -415,6 +415,15 @@ body{
         font-size: 42px;
     }
 
+    .voiting {
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+
+    .voiting-result-wrapper{
+        padding: 20px;
+    }
+
     .control{
         display: flex;
         flex-wrap: wrap;
@@ -455,7 +464,6 @@ body{
     }
 
     .tab__radio-item {
-        width: 50%;
         text-align: center;
     }
 
@@ -477,6 +485,17 @@ body{
         background: #434343;
         color: #fff;
         border: 2px solid #fff;
+    }
+    
+    
+
+    label.check{
+        width: 50%;
+    }
+
+    .tab h2, .tab h3 {
+        text-align: center;
+        color: #fff;
     }
 
     

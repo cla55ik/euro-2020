@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: 'Bridge Type';
-    src: url('/src/fonts/BridgeTypeEuro2020.ttf') format('truetype');
+    src: url('/dist/fonts/BridgeTypeEuro2020.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

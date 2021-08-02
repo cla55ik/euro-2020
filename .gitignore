@@ -1,0 +1,3 @@
+.vscode
+config/connectDB.php
+node_modules

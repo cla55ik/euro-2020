@@ -16,9 +16,7 @@ $uid_id = session_id();
 <html lang="en" dir="ltr">
   <head>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    
-    <script src="/src/js/antimat.js"></script>
-    <link rel="stylesheet" type="text/css" href="/src/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/dist/css/style.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
     <title>Лучшие игроки EURO 2020</title>
@@ -54,7 +52,7 @@ $uid_id = session_id();
 
 -->
 <div class="voiting__title">
-    <img src="src/img/logo.webp" alt="">
+    <img src="dist/img/logo.webp" alt="">
     <h1>Голосование: Лучшие игроки EURO 2020</h1>
 </div>
 
@@ -80,7 +78,7 @@ $uid_id = session_id();
                 <label for="forward-<?=$forward['id'];?>" class="check">
                     <div class="tab__radio-item">
                         <input type="radio" name="forward" id="forward-<?=$forward['id'];?>" value="<?=$forward['name'];?>">
-                        <img src="/src/img/forward-<?=$forward['img'];?>.jpg" alt="">
+                        <img src="/dist/img/forward-<?=$forward['img'];?>.jpg" alt="">
                         <h3><?=$forward['name']; ?></h3>
                     </div>
                 </label>
@@ -95,7 +93,7 @@ $uid_id = session_id();
                     <label for="central-<?=$central['id'];?>" class="check">
                         <div class="tab__radio-item">
                             <input type="radio" name="central" id="central-<?=$central['id'];?>" value="<?=$central['name'];?>">
-                            <img src="/src/img/central-<?=$central['img'];?>.jpg" alt="">
+                            <img src="/dist/img/central-<?=$central['img'];?>.jpg" alt="">
                             <h3><?=$central['name']; ?></h3>
                         </div>
                     </label>  
@@ -110,7 +108,7 @@ $uid_id = session_id();
                 <label for="def-<?=$def['id'];?>" class="check">        
                     <div class="tab__radio-item">
                         <input type="radio" name="def" id="def-<?=$def['id'];?>" value="<?=$def['name'];?>">
-                        <img src="/src/img/def-<?=$def['img'];?>.jpg" alt="">
+                        <img src="/dist/img/def-<?=$def['img'];?>.jpg" alt="">
                         <h3><?=$def['name']; ?></h3>
                     </div>
                 </label>
@@ -125,7 +123,7 @@ $uid_id = session_id();
                 <label for="gk-<?=$gk['id'];?>" class="check">
                     <div class="tab__radio-item">
                         <input type="radio" name="gk" id="gk-<?=$gk['id'];?>" value="<?=$gk['name'];?>">
-                        <img src="/src/img/gk-<?=$gk['img'];?>.jpg" alt="">
+                        <img src="/dist/img/gk-<?=$gk['img'];?>.jpg" alt="">
                         <h3><?=$gk['name']; ?></h3>                   
                     </div>
                 </label>
@@ -194,7 +192,7 @@ $uid_id = session_id();
    </div>
 </div>
 
-<script src="/src/js/step-form.js"></script>
+<script src="/dist/js/step-form-min.js"></script>
 
 
 </body>

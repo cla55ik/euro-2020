@@ -1,0 +1,485 @@
+
+@font-face {
+    font-family: 'Bridge Type';
+    src: url('/src/fonts/BridgeTypeEuro2020.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'Bridge Type';
+    margin:0 20px;
+    background-color: #439AB1;
+
+}
+
+*{
+    font-family: 'Bridge Type';
+}
+
+button{
+    cursor: pointer;
+}
+
+
+
+.hidden{
+    display: none;
+   
+}
+
+
+.anti-mat_form-wrapper{
+    padding: 35px;
+    margin: 20px 0;
+    display: inline-block;
+    border: 1px solid #eee;
+    border-radius: 20px;
+}
+
+.voiting__title{
+    text-align: center;
+    padding-top: 40px;
+}
+
+.voiting__title h1{
+    color: #eee;
+    font-size: 50px;
+}
+
+.voiting__title img {
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+}
+
+.tab__radio-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+label.check{
+    width: 25%;
+    text-align: center;
+}
+
+.tab__radio-item h3{
+    letter-spacing: 0.05em;
+}
+
+.tab__radio-item{
+    text-align: center;
+}
+
+input[type="radio"]{
+    visibility: hidden;
+}
+
+.tab__radio-item img{
+    border-radius: 500px;
+}
+
+input[type="radio" i]:checked{
+    border: 2px solid #000;
+}
+
+.control__button, .control{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.control{
+    margin-bottom: 20px;
+}
+
+.control__button{
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    
+}
+
+button.btn{
+    font-size: 1.5rem;
+    background: rgba(0,0,0,.3);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 25px;
+}
+
+
+.voiting{
+    background-color: rgba(0,0,0,.3);
+    border-radius: 15px;
+    padding: 35px;
+}
+
+.tab h2, .tab h3{
+    color: #fff;
+}
+
+
+
+.form__control{
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+button.btn-prev, button.btn-next{
+    border: none;
+    border-radius: 10px;
+    padding: 5px 15px;
+    background-color: #eee;
+}
+
+
+.voiting-result-wrapper{
+    background-color: rgba(0,0,0,.3);
+    border-radius: 15px;
+    padding: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+
+.player{
+    text-align: center;
+    color: #fff;
+}
+
+.player h3{
+    letter-spacing: 0.1em;
+}
+
+.player__img img {
+    border-radius: 500px;
+}
+
+
+
+.message{
+    text-align: center;
+    color: #fff;
+    font-size: 28px;
+}
+
+.voiting-result{
+    margin-bottom: 70px;
+}
+
+
+/*Animations*/
+
+
+.tab{
+    animation: fade-in 1s;
+}
+
+.hidden {
+    display: none;
+    animation: fade-out 2s;
+}
+
+.voiting-result{
+    animation: fade-in 2s;
+}
+/*
+.forward{
+    animation-name: slideRight;
+    -webkit-animation-name: slideRight;  
+ 
+    animation-duration: 2s; 
+    -webkit-animation-duration: 2s;
+ 
+    animation-timing-function: ease-in-out; 
+    -webkit-animation-timing-function: ease-in-out;     
+ 
+    visibility: visible !important; 
+}
+
+.def{
+    animation-name: slideRight;
+    -webkit-animation-name: slideRight;  
+ 
+    animation-duration: 2s; 
+    -webkit-animation-duration: 2s;
+
+    animation-delay: 500ms;
+ 
+    animation-timing-function: ease-in-out; 
+    -webkit-animation-timing-function: ease-in-out;     
+ 
+    visibility: visible !important; 
+}
+
+
+.central{
+    animation-name: slideLeft;
+    -webkit-animation-name: slideLeft;  
+ 
+    animation-duration: 2s; 
+    -webkit-animation-duration: 2s;
+ 
+    animation-timing-function: ease-in-out; 
+    -webkit-animation-timing-function: ease-in-out;     
+ 
+    visibility: visible !important; 
+}
+
+.gk{
+    animation-name: slideLeft;
+    -webkit-animation-name: slideLeft;  
+ 
+    animation-duration: 2s; 
+    -webkit-animation-duration: 2s;
+
+    animation-delay: 500ms;
+ 
+    animation-timing-function: ease-in-out; 
+    -webkit-animation-timing-function: ease-in-out;     
+ 
+    visibility: visible !important; 
+}
+*/
+
+
+@keyframes fade-in{
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fade-out{
+    0%   { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(150%);
+    }
+    50%{
+        transform: translateX(-8%);
+    }
+    65%{
+        transform: translateX(4%);
+    }
+    80%{
+        transform: translateX(-4%);
+    }
+    95%{
+        transform: translateX(2%);
+    }           
+    100% {
+        transform: translateX(0%);
+    }
+}
+ 
+@-webkit-keyframes slideLeft {
+    0% {
+        -webkit-transform: translateX(150%);
+    }
+    50%{
+        -webkit-transform: translateX(-8%);
+    }
+    65%{
+        -webkit-transform: translateX(4%);
+    }
+    80%{
+        -webkit-transform: translateX(-4%);
+    }
+    95%{
+        -webkit-transform: translateX(2%);
+    }           
+    100% {
+        -webkit-transform: translateX(0%);
+    }
+    
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-150%);
+    }
+    50%{
+        transform: translateX(8%);
+    }
+    65%{
+        transform: translateX(-4%);
+    }
+    80%{
+        transform: translateX(4%);
+    }
+    95%{
+        transform: translateX(-2%);
+    }           
+    100% {
+        transform: translateX(0%);
+    }   
+}
+ 
+@-webkit-keyframes slideRight {
+    0% {
+        -webkit-transform: translateX(-150%);
+    }
+    50%{
+        -webkit-transform: translateX(8%);
+    }
+    65%{
+        -webkit-transform: translateX(-4%);
+    }
+    80%{
+        -webkit-transform: translateX(4%);
+    }
+    95%{
+        -webkit-transform: translateX(-2%);
+    }           
+    100% {
+        -webkit-transform: translateX(0%);
+    }
+}
+
+
+/* Animation for chrcked input*/
+
+input[type="radio"]{
+    display: none;
+}
+
+
+.tab__radio-item img{
+    border: 2px solid transparent;
+    transition: 650ms;
+}
+
+.tab__radio-item:hover > img{
+    transform: scale(1.1);
+}
+
+.tab__radio-item > input:checked ~ img {
+    border: 2px solid #002B31;
+   
+}
+
+.tab__radio-item > input:checked ~ h3 {
+    color: #002B31;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+@media (min-width:1200px){
+
+.control__button{
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    
+}
+
+body{
+    max-width: 1180px;
+    margin:0 auto;
+}
+
+.form-wrapper{
+    padding: 50px;
+    border: 1px solid #000;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+
+
+}
+
+*/
+
+@media (max-width: 750px){
+
+
+    .voiting__title h1{
+        font-size: 42px;
+    }
+
+    .control{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .control__button{
+        width: 100%;
+    }
+
+    button.btn{
+        font-size: 24px;
+        padding: 10px 35px;
+        margin-bottom: 25px;
+    }
+
+    .player{
+        text-align: center;
+        color: #fff;
+        width: 50%;
+        margin-bottom: 40px;
+    }
+
+    .player_percent h4{
+        font-size: 28px;
+        margin:0px;
+    }
+
+    .player__name h3{
+        font-size: 20px;
+        margin:15px 0;
+        
+    }
+
+    .player__img img{
+        width: 120px;
+        margin-top: 20px;
+    }
+
+    .tab__radio-item {
+        width: 50%;
+        text-align: center;
+    }
+
+    .tab__radio-item img {
+        width: 120px;
+    }
+
+    button.btn-next{
+        font-size: 20px;
+        padding: 8px 20px;
+        background: #51AB34;
+        color: #fff;
+        border: 2px solid #fff;
+    }
+
+    button.btn-prev{
+        font-size: 20px;
+        padding: 8px 20px;
+        background: #434343;
+        color: #fff;
+        border: 2px solid #fff;
+    }
+
+    
+}
+
+

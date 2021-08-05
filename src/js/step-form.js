@@ -213,22 +213,22 @@ function renderResult(res){
         document.getElementById('voiting_result').classList.toggle('hidden');
         document.getElementById('viewresult').innerHTML='Скрыть результат';
 
-        let forward_img = '/dist/img/forward-' + res.forward_img + '.jpg';
+        let forward_img = '/src/img/forward-' + res.forward_img + '.jpg';
         document.getElementById('forward_name').innerHTML = res.forward;
         document.getElementById('forward_img').src = forward_img;
         document.getElementById('forward_percent').innerHTML = res.forward_percent;
 
-        let central_img = '/dist/img/central-' + res.central_img + '.jpg';
+        let central_img = '/src/img/central-' + res.central_img + '.jpg';
         document.getElementById('central_name').innerHTML = res.central;
         document.getElementById('central_img').src = central_img;
         document.getElementById('central_percent').innerHTML = res.central_percent;
         
-        let def_img = '/dist/img/def-' + res.def_img + '.jpg';
+        let def_img = '/src/img/def-' + res.def_img + '.jpg';
         document.getElementById('def_name').innerHTML = res.def;
         document.getElementById('def_img').src = def_img;
         document.getElementById('def_percent').innerHTML = res.def_percent;
 
-        let gk_img = '/dist/img/gk-' + res.gk_img + '.jpg';
+        let gk_img = '/src/img/gk-' + res.gk_img + '.jpg';
         document.getElementById('gk_name').innerHTML = res.gk;
         document.getElementById('gk_img').src = gk_img;
         document.getElementById('gk_percent').innerHTML = res.gk_percent;

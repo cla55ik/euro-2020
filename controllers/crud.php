@@ -81,13 +81,13 @@ class BestPlayersVoiting
     {
 
         $best_players = [
-            'forward'=>'nan',
+            'fw'=>'nan',
             'forward_count'=>'',
             'forward_percent'=>'',
-            'central'=>'nan',
+            'cm'=>'nan',
             'central_count'=>'',
             'central_percent'=>'',
-            'def'=>'nan',
+            'df'=>'nan',
             'def_count'=>'',
             'def_percent'=>'',
             'gk'=>'nan',
@@ -100,26 +100,27 @@ class BestPlayersVoiting
 
         foreach ($best_players as $key => $value) {
             if ($value != '') {
-                $query_position = "SELECT * FROM {$key}";
+                $query_position = "SELECT * FROM `players`
+                                WHERE position = ?";
 
                 $stmt = $this->conn->prepare($query_position);
-                $stmt->execute();
+                $stmt->execute([$key]);
                 $players = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
                 switch ($key) {
-                    case 'forward':
+                    case 'fw':
                         $best_players['forward'] = $this->bestForward($players)['best_player'];
                         $best_players['forward_count'] = $this->bestForward($players)['best_count'];
                         $percent = $best_players['forward_count'] / $allvaiting * 100;
                         $best_players['forward_percent'] = (int)$percent . '%';
                         break;
-                    case 'central':
+                    case 'cm':
                         $best_players['central'] = $this->bestCentral($players)['best_player'];
                         $best_players['central_count'] = $this->bestCentral($players)['best_count'];
                         $percent = $best_players['central_count'] / $allvaiting * 100;
                         $best_players['central_percent'] = (int)$percent . '%';
                         break;
-                    case 'def':
+                    case 'df':
                         $best_players['def'] = $this->bestDef($players)['best_player'];
                         $best_players['def_count'] = $this->bestDef($players)['best_count'];
                         $percent = $best_players['def_count'] / $allvaiting * 100;
@@ -300,8 +301,9 @@ class Players{
     }
 
     public function getForwardByName($name){
-        $query = "SELECT * FROM `forward` 
-                    WHERE name = ?";
+        $query = "SELECT * FROM `players` 
+                    WHERE `position`='fw'
+                    AND name = ?";
         $stmt = $this->conn->prepare($query);
         $stmt->execute([$name]);
         $stmt = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -319,8 +321,9 @@ class Players{
     }
 
     public function getCentralByName($name){
-        $query = "SELECT * FROM `central` 
-                    WHERE name = ?";
+        $query = "SELECT * FROM `players` 
+                    WHERE `position`='cm'
+                    AND name = ?";
         $stmt = $this->conn->prepare($query);
         $stmt->execute([$name]);
         $stmt = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -338,8 +341,9 @@ class Players{
     }
 
     public function getDefByName($name){
-        $query = "SELECT * FROM `def` 
-                    WHERE name = ?";
+        $query = "SELECT * FROM `players` 
+                WHERE `position`='df'
+                AND name = ?";
         $stmt = $this->conn->prepare($query);
         $stmt->execute([$name]);
         $stmt = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -357,8 +361,9 @@ class Players{
     }
 
     public function getGkByName($name){
-        $query = "SELECT * FROM `gk` 
-                    WHERE name = ?";
+        $query = "SELECT * FROM `players` 
+                WHERE `position`='gk'
+                AND name = ?";
         $stmt = $this->conn->prepare($query);
         $stmt->execute([$name]);
         $stmt = $stmt->fetch(PDO::FETCH_ASSOC);

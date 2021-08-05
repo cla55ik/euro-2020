@@ -1,0 +1,183 @@
+
+label.check{
+    width: 25%;
+    text-align: center;
+}
+
+
+.tab{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+
+.tab__radio-item h3{
+    font-size: 24px;
+    line-height: 1em;
+    letter-spacing: 0.05em;
+    margin-bottom: 0px;
+    
+}
+
+.tab__radio-item{
+    background-color: rgba(0,0,0,.4);
+    border-radius: 15px;
+    padding: 25px 40px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tab__radio-item:hover {
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    background-color: rgba(0,0,0,.55); 
+}
+
+
+.tab__radio-item img{
+    border-radius: 500px;
+    width: 100px;
+}
+
+
+.item__info{
+    width: 25%;
+    text-align: left;
+    margin: 0 50px;
+}
+
+.item__stats{
+    text-align: left;
+    color: #fff;
+    width: 25%;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+input[type="radio" i]:checked{
+    border: 2px solid #000;
+}
+
+
+.voiting{
+    
+    border-radius: 15px;
+    padding: 35px;
+}
+
+
+
+.item__country{
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.item__country p{
+    color: #fff;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.item__country img{
+    width: 24px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+.tab h2, .tab h3{
+    color: #fff;
+    
+}
+
+.tab h2{
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.item__check label{
+    font-family: 'Bridge Type';
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 8px 24px;
+    font-size: 20px;
+    
+    background: rgba(0, 43, 49, 1);
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.item__check label:hover{
+    
+    background: #51AB34;
+    
+}
+
+
+
+.form__control{
+    margin-top: 20px;
+    text-align: center;
+    position:sticky;
+    left:0;
+    bottom: 0;
+    background-color: rgba(0, 43, 49, 1);
+    border-radius: 15px;
+    padding: 20px 0;
+}
+
+
+button.btn-prev, button.btn-next{
+    border: none;
+    border-radius: 10px;
+    padding: 8px 24px;
+    font-size: 24px;
+    background-color: #eee;
+}
+
+button.btn-prev{
+    background: #434343;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+button.btn-next{
+    background: #51AB34;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+
+
+
+/* Animation for chrcked input*/
+
+input[type="radio"]{
+    visibility: hidden;
+ }
+ 
+ input[type="radio"]{
+     display: none;
+ }
+ 
+
+
+.tab__radio-item img{
+    
+    border: 2px solid transparent;
+    transition: 650ms;
+}
+
+.tab__radio-item:hover > img{
+    transform: scale(1.1);
+}
+
+
+input:checked + label {
+    background: #51AB34;
+   
+}
+

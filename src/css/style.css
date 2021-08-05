@@ -1,4 +1,7 @@
 
+@import url('/src/fonts/PFBeauSansPro/pfbeau.css'); 
+@import url('voiting.css');
+
 @font-face {
     font-family: 'Bridge Type';
     src: url('/src/fonts/BridgeTypeEuro2020.ttf') format('truetype');
@@ -6,16 +9,25 @@
     font-style: normal;
 }
 
+h1, h2, h3, h4, p{
+    margin:0;
+    padding: 0;
+}
+
 body{
-    font-family: 'Bridge Type';
+    font-family: 'PF BeauSans Pro';
     max-width: 1200px;
     margin:0 auto;
     background-color: #439AB1;
 
 }
 
-*{
+
+
+
+h1, h2, h3, button{
     font-family: 'Bridge Type';
+    font-weight: 500;
 }
 
 button{
@@ -27,15 +39,6 @@ button{
 .hidden{
     display: none;
    
-}
-
-
-.anti-mat_form-wrapper{
-    padding: 35px;
-    margin: 20px 0;
-    display: inline-block;
-    border: 1px solid #eee;
-    border-radius: 20px;
 }
 
 .voiting__title{
@@ -54,63 +57,7 @@ button{
     object-fit: contain;
 }
 
-.tab__radio-list{
-    
-}
 
-
-
-label.check{
-    width: 25%;
-    text-align: center;
-}
-
-.tab__radio-item h3{
-    font-size: 24px;
-    letter-spacing: 0.05em;
-    margin-bottom: 0px;
-}
-
-.tab__radio-item{
-    background-color: rgba(0,0,0,.4);
-    border-radius: 15px;
-    padding: 25px 40px;
-    margin-bottom: 30px;
-    display: flex;
-    text-align: center;
-}
-
-.tab__radio-item:hover {
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-    background-color: rgba(0,0,0,.55); 
-}
-
-input[type="radio"]{
-    visibility: hidden;
-}
-
-.tab__radio-item img{
-    border-radius: 500px;
-}
-
-
-.item__info{
-    width: 25%;
-    text-align: left;
-    margin: 0 50px;
-}
-
-.item__stats{
-    text-align: left;
-    margin-top: 64px;
-    color: #fff;
-    width: 25%;
-}
-
-
-input[type="radio" i]:checked{
-    border: 2px solid #000;
-}
 
 .control__button, .control{
     display: flex;
@@ -118,6 +65,7 @@ input[type="radio" i]:checked{
 }
 
 .control{
+    margin-top: 50px;
     margin-bottom: 20px;
 }
 
@@ -137,49 +85,6 @@ button.btn{
     padding: 8px 25px;
 }
 
-
-.voiting{
-    
-    border-radius: 15px;
-    padding: 35px;
-}
-
-
-
-.item__country{
-    display: flex;
-}
-
-.item__country p{
-    color: #fff;
-    margin-left: 10px;
-}
-
-.item__country img{
-    width: 20px;
-    height: auto;
-    object-fit: contain;
-}
-
-
-.tab h2, .tab h3{
-    color: #fff;
-}
-
-
-
-.form__control{
-    margin-top: 20px;
-    text-align: center;
-}
-
-
-button.btn-prev, button.btn-next{
-    border: none;
-    border-radius: 10px;
-    padding: 5px 15px;
-    background-color: #eee;
-}
 
 
 .voiting-result-wrapper{
@@ -388,31 +293,7 @@ button.btn-prev, button.btn-next{
 }
 
 
-/* Animation for chrcked input*/
 
-input[type="radio"]{
-    display: none;
-}
-
-
-.tab__radio-item img{
-    
-    border: 2px solid transparent;
-    transition: 650ms;
-}
-
-.tab__radio-item:hover > img{
-    transform: scale(1.1);
-}
-
-.tab__radio-item > input:checked ~ img {
-    border: 2px solid #002B31;
-   
-}
-
-.tab__radio-item > input:checked ~ h3 {
-    color: #002B31;
-}
 
 
 
@@ -506,13 +387,7 @@ body{
         margin-top: 20px;
     }
 
-    .tab__radio-item {
-        text-align: center;
-    }
-
-    .tab__radio-item img {
-        width: 120px;
-    }
+    
 
     button.btn-next{
         font-size: 20px;

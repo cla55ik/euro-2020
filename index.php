@@ -17,6 +17,7 @@ $uid_id = session_id();
   <head>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="/src/css/style.css">
+    
     <link rel="shortcut icon" href="src/img/favicon.png" type="image/png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
@@ -76,9 +77,9 @@ $uid_id = session_id();
             <div><h2>Выберите лучшего нападающего</h2></div>
             <div class="tab__radio-list">
                 <?php  foreach($forwards as $forward) :?>
-                <label for="forward-<?=$forward['id'];?>" class="check">        
+                     
                     <div class="tab__radio-item">
-                        <input type="radio" name="forward" id="forward-<?=$forward['id'];?>" value="<?=$forward['name'];?>">
+                        
                         <div class="item__img">
                             <img src="/src/img/forward-<?=$forward['img'];?>.jpg" alt="">
                         </div>
@@ -101,9 +102,16 @@ $uid_id = session_id();
                                <span><?= $forward['weight']; ?>кг</span>   
                             </div>
                         </div>
+                        <div class="item__check">
+                        <input type="radio" name="forward" id="forward-<?=$forward['id'];?>" value="<?=$forward['name'];?>">
+                        <label for="forward-<?=$forward['id'];?>" class="check">
+                            Выбрать
+                            
+                        </label>   
+                        </div>
                         
                     </div>
-                </label>
+                
                 <?php endforeach; ?>
                 
             </div>

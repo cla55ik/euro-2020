@@ -47,7 +47,7 @@ function showTab(n) {
     if(currentTab != 0 ) document.getElementById('prevBtn').classList.remove('hidden')
     if(currentTab != x.length -1) document.getElementById('nextBtn').classList.remove('hidden')
     if(currentTab == x.length -1){
-        document.getElementById('nextBtn').innerHTML = 'Submit'
+        document.getElementById('nextBtn').innerHTML = 'Отправить'
         
     } 
     x[n].classList.toggle('hidden');
@@ -213,23 +213,35 @@ function renderResult(res){
         document.getElementById('voiting_result').classList.toggle('hidden');
         document.getElementById('viewresult').innerHTML='Скрыть результат';
 
+        let forward_countryimg = '/src/img/' + res.forward_countryimg + '.svg';
         let forward_img = '/src/img/forward-' + res.forward_img + '.jpg';
         document.getElementById('forward_name').innerHTML = res.forward;
+        document.getElementById('forward_country').innerHTML = res.forward_country;
+        document.getElementById('forward_countryimg').src = forward_countryimg;
         document.getElementById('forward_img').src = forward_img;
         document.getElementById('forward_percent').innerHTML = res.forward_percent;
 
+        let central_countryimg = '/src/img/' + res.central_countryimg + '.svg';
         let central_img = '/src/img/central-' + res.central_img + '.jpg';
         document.getElementById('central_name').innerHTML = res.central;
+        document.getElementById('central_country').innerHTML = res.central_country;
+        document.getElementById('central_countryimg').src = central_countryimg;
         document.getElementById('central_img').src = central_img;
         document.getElementById('central_percent').innerHTML = res.central_percent;
         
+        let def_countryimg = '/src/img/' + res.def_countryimg + '.svg';
         let def_img = '/src/img/def-' + res.def_img + '.jpg';
         document.getElementById('def_name').innerHTML = res.def;
+        document.getElementById('def_country').innerHTML = res.def_country;
+        document.getElementById('def_countryimg').src = def_countryimg;
         document.getElementById('def_img').src = def_img;
         document.getElementById('def_percent').innerHTML = res.def_percent;
 
+        let gk_countryimg = '/src/img/' + res.gk_countryimg + '.svg';
         let gk_img = '/src/img/gk-' + res.gk_img + '.jpg';
         document.getElementById('gk_name').innerHTML = res.gk;
+        document.getElementById('gk_country').innerHTML = res.gk_country;
+        document.getElementById('gk_countryimg').src = gk_countryimg;
         document.getElementById('gk_img').src = gk_img;
         document.getElementById('gk_percent').innerHTML = res.gk_percent;
 

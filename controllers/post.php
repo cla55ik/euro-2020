@@ -132,15 +132,26 @@ function viewResult(){
     $res=[
         'forward'=>$forward['name'],
         'forward_img'=>$forward['img'],
+        'forward_country'=>$forward['country'],
+        'forward_countryimg'=>$forward['countryimg'],
         'forward_percent'=>$best_players['forward_percent'],
+
         'central'=>$central['name'],
         'central_img'=>$central['img'],
+        'central_country'=>$central['country'],
+        'central_countryimg'=>$central['countryimg'],
         'central_percent'=>$best_players['central_percent'],
+
         'def'=>$def['name'],
         'def_img'=>$def['img'],
+        'def_country'=>$def['country'],
+        'def_countryimg'=>$def['countryimg'],
         'def_percent'=>$best_players['def_percent'],
+
         'gk'=>$gk['name'],
         'gk_img'=>$gk['img'],
+        'gk_country'=>$gk['country'],
+        'gk_countryimg'=>$gk['countryimg'],
         'gk_percent'=>$best_players['gk_percent'],
         'all_vaiting'=>$best_players['all_vaiting'],
         'status'=>'ok',

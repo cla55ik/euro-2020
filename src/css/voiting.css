@@ -65,6 +65,7 @@ input[type="radio" i]:checked{
     
     border-radius: 15px;
     padding: 35px;
+    padding-bottom: 0;
 }
 
 
@@ -126,6 +127,7 @@ input[type="radio" i]:checked{
     bottom: 0;
     background-color: rgba(0, 43, 49, 1);
     border-radius: 15px;
+    border-radius: 15px 15px 0 0;
     padding: 20px 0;
 }
 
@@ -181,3 +183,24 @@ input:checked + label {
    
 }
 
+
+
+@media screen and (max-width:750px){
+    .tab__radio-item{
+        flex-wrap: wrap;
+    }
+
+    .item__stats{
+        width: 100%;
+    }
+
+    .item__check {
+        display: flex;
+        margin-top: 10px;
+    }
+
+    label.check{
+        padding: 8px 45px;
+    }
+    
+}

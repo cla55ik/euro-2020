@@ -1,0 +1,148 @@
+
+.voiting-result-wrapper{
+    
+    border-radius: 15px;
+    padding: 35px;
+    
+
+}
+
+
+.player{
+    text-align: left;
+    color: #fff;
+    display: flex;
+    background-color: rgba(0,0,0,.4);
+    border-radius: 15px;
+    padding: 25px 40px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player__position{
+    font-family: 'Bridge Type';
+    font-size: 56px;
+    width: 30%;
+    color: #eee;
+    border-right: 2px solid #eee;
+}
+
+.player h3{
+    font-size: 24px;
+    line-height: 1em;
+    letter-spacing: 0.05em;
+}
+
+.player__img{
+    width: 15%;
+    text-align: center;
+}
+
+
+.player__img img {
+    border-radius: 500px;
+    width: 135px;
+}
+
+.player__name{
+    width: 35%;
+}
+
+.player h4{
+    font-size: 18px;
+    color: #eee;
+}
+
+.player_percent .percent{
+    font-family: 'Bridge Type';
+    font-size: 72px;
+    line-height: 1em;
+    color: #eee;
+}
+
+.precent_char{
+    font-family: 'Bridge Type';
+    color: #eee;
+    font-size: 50px;
+    line-height: 1em;
+}
+
+.voiting-result{
+    margin-bottom: 70px;
+}
+
+.country__name{
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.country__img img{
+    width: 35px;
+}
+
+.player__country{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.player:hover {
+    -webkit-box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.71);
+    -moz-box-shadow:    inset 0px 0px 12px 0px rgba(0, 0, 0, 0.71);
+    box-shadow:         inset 0px 0px 12px 0px rgba(0, 0, 0, 0.71);
+}
+
+
+@media screen and (max-width:750px){
+
+
+    .player{
+        flex-wrap: wrap;
+    }
+
+
+    
+    .player__position{
+        border: none;
+        width: 100%;
+        font-size: 36px;
+        margin-bottom: 35px;
+    }
+
+    .player__img{
+        width: 40%;
+    }
+
+    .player__img img{
+        width: 110px;
+    }
+
+    .player__name{
+        width: 50%;
+        
+    }
+
+    .country__name{
+        font-size: 18px;
+    }
+
+    .country__img img{
+        width: 25px;
+    }
+
+    .player_percent{
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .player_percent h4{
+        width: 35%;
+    }
+}

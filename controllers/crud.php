@@ -112,25 +112,33 @@ class BestPlayersVoiting
                         $best_players['forward'] = $this->bestForward($players)['best_player'];
                         $best_players['forward_count'] = $this->bestForward($players)['best_count'];
                         $percent = $best_players['forward_count'] / $allvaiting * 100;
-                        $best_players['forward_percent'] = (int)$percent . '%';
+                        $best_players['forward_percent'] = (int)$percent;
+                        $best_players['forward_country'] = $this->getCountryByName($best_players['forward'])['country'];
+                        $best_players['forward_countryimg'] = $this->getCountryByName($best_players['forward'])['countryimg'];
                         break;
                     case 'cm':
                         $best_players['central'] = $this->bestCentral($players)['best_player'];
                         $best_players['central_count'] = $this->bestCentral($players)['best_count'];
                         $percent = $best_players['central_count'] / $allvaiting * 100;
-                        $best_players['central_percent'] = (int)$percent . '%';
+                        $best_players['central_percent'] = (int)$percent;
+                        $best_players['central_country'] = $this->getCountryByName($best_players['central'])['country'];
+                        $best_players['central_countryimg'] = $this->getCountryByName($best_players['central'])['countryimg'];
                         break;
                     case 'df':
                         $best_players['def'] = $this->bestDef($players)['best_player'];
                         $best_players['def_count'] = $this->bestDef($players)['best_count'];
                         $percent = $best_players['def_count'] / $allvaiting * 100;
-                        $best_players['def_percent'] = (int)$percent . '%';
+                        $best_players['def_percent'] = (int)$percent;
+                        $best_players['def_country'] = $this->getCountryByName($best_players['def'])['country'];
+                        $best_players['def_countryimg'] = $this->getCountryByName($best_players['def'])['countryimg'];
                         break;
                     case 'gk':
                         $best_players['gk'] = $this->bestGk($players)['best_player'];
                         $best_players['gk_count'] = $this->bestGk($players)['best_count'];
                         $percent = $best_players['gk_count'] / $allvaiting * 100;
-                        $best_players['gk_percent'] = (int)$percent . '%';
+                        $best_players['gk_percent'] = (int)$percent;
+                        $best_players['gk_country'] = $this->getCountryByName($best_players['gk'])['country'];
+                        $best_players['gk_countryimg'] = $this->getCountryByName($best_players['gk'])['countryimg'];
                         break;
                     default:
                         
@@ -156,6 +164,16 @@ class BestPlayersVoiting
 
     }
 
+    private function getCountryByName($name){
+        $query = "SELECT * FROM `players`
+                                WHERE name = ?";
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute([$name]);
+        $country = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $country;
+    }
 
     private function bestForward($forwards)
     {    

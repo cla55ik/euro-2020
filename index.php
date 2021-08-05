@@ -258,53 +258,117 @@ $uid_id = session_id();
 <div class="voiting-result hidden" id="voiting_result">
     <div class="voiting-result-wrapper">
    <div class="forward player" id="forward">
-        <div class="player_percent">
-            <h4 id="forward_percent"></h4>
+       <div class="player__position">
+            Best Forward
        </div>
        <div class="player__img" >
             <img id="forward_img" src="" alt="">
        </div>
        <div class="player__name">
             <h3 id="forward_name"></h3>
+            <div class="player__country">
+                <div class="country__img">
+                    <img id="forward_countryimg" src="" alt="">
+                </div>
+                <div id="forward_country" class="country__name">
+
+                </div>
+            </div>
+       </div>
+       <div class="player_percent">
+            <h4>Голосов набрано</h4>
+            <div>
+                <span class="percent" id="forward_percent"></span>
+                <span class="precent_char">%</span>
+            </div>
        </div>
        
    </div>
    <div class="central player" id="central">
-        <div class="player_percent">
-            <h4 id="central_percent"></h4>
+       <div class="player__position">
+            Best Midfielder
        </div>
-       <div class="player__img">
+       <div class="player__img" >
             <img id="central_img" src="" alt="">
        </div>
        <div class="player__name">
             <h3 id="central_name"></h3>
+            <div class="player__country">
+                <div class="country__img">
+                    <img id="central_countryimg" src="" alt="">
+                </div>
+                <div id="central_country"  class="country__name">
+
+                </div>
+            </div>
        </div>
-      
+       <div class="player_percent">
+            <h4>Голосов набрано</h4>
+            <div>
+                <span class="percent" id="central_percent"></span>
+                <span class="precent_char">%</span>
+            </div>
+                
+       </div>
+       
    </div>
+   
    <div class="def player" id="def">
-        <div class="player_percent">
-            <h4 id="def_percent"></h4>
+       <div class="player__position">
+            Best Defender
        </div>
-       <div class="player__img">
+       <div class="player__img" >
             <img id="def_img" src="" alt="">
        </div>
        <div class="player__name">
             <h3 id="def_name"></h3>
+            <div class="player__country">
+                <div class="country__img">
+                    <img id="def_countryimg" src="" alt="">
+                </div>
+                <div id="def_country"  class="country__name">
+
+                </div>
+            </div>
        </div>
-       
-   </div>
+       <div class="player_percent">
+            <h4>Голосов набрано</h4>
+            <div>
+                <span class="percent" id="def_percent"></span>
+                <span class="precent_char">%</span>
+            </div>
+            
+       </div>
+   </div>                 
+
+   
    <div class="gk player" id="gk">
-        <div class="player_percent">
-            <h4 id="gk_percent"></h4>
+       <div class="player__position">
+            Best Goalkeeper
        </div>
-       <div class="player__img">
+       <div class="player__img" >
             <img id="gk_img" src="" alt="">
        </div>
        <div class="player__name">
             <h3 id="gk_name"></h3>
+            <div class="player__country">
+                <div class="country__img">
+                    <img id="gk_countryimg" src="" alt="">
+                </div>
+                <div id="gk_country"  class="country__name">
+
+                </div>
+            </div>
        </div>
-       
-   </div>
+       <div class="player_percent">
+            <h4>Голосов набрано</h4>
+            <div>
+                <span class="percent" id="gk_percent"></span>
+                <span class="precent_char">%</span>
+            </div>
+            
+       </div>
+   </div>    
    </div>
 </div>
 

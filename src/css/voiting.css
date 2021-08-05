@@ -186,12 +186,43 @@ input:checked + label {
 
 
 @media screen and (max-width:750px){
+
+    .voiting {
+        padding: 20px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .tab h2 {
+        text-align: center;
+        color: #fff;
+    }
+
     .tab__radio-item{
         flex-wrap: wrap;
     }
 
+    .item__img{
+        width: 40%;
+    }
+
+    .item__img img{
+        width: 90px;
+    }
+
+    .item__info{
+        width: 55%;
+        margin: 0px;
+        text-align: left;
+    }
+
+    .item__info h3 {
+        text-align: left;
+    }
+
     .item__stats{
         width: 100%;
+        margin-top: 10px;
     }
 
     .item__check {

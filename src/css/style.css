@@ -321,10 +321,7 @@ body{
         font-size: 42px;
     }
 
-    .voiting {
-        padding: 20px;
-        margin-bottom: 40px;
-    }
+   
 
     .voiting-result-wrapper{
         padding: 20px;
@@ -393,10 +390,7 @@ body{
         width: 50%;
     }
 
-    .tab h2, .tab h3 {
-        text-align: center;
-        color: #fff;
-    }
+    
 
     
 }

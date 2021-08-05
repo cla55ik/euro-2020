@@ -118,45 +118,131 @@ $uid_id = session_id();
         </div>
         <div class="tab hidden">
         <div><h2>Выберите лучшего полузащитника</h2></div>
-            <div class="tab__radio-list">
+        <div class="tab__radio-list">
                 <?php  foreach($centrals as $central) :?>
-                    <label for="central-<?=$central['id'];?>" class="check">
-                        <div class="tab__radio-item">
-                            <input type="radio" name="central" id="central-<?=$central['id'];?>" value="<?=$central['name'];?>">
+                     
+                    <div class="tab__radio-item">
+                        
+                        <div class="item__img">
                             <img src="/src/img/central-<?=$central['img'];?>.jpg" alt="">
-                            <h3><?=$central['name']; ?></h3>
                         </div>
-                    </label>  
+                        <div class="item__info">
+                            <h3><?=$central['name']; ?></h3>
+                            <div class="item__country">
+                                <img src="/src/img/<?=$central['countryimg'];?>.svg" alt="">
+                                <p><?=$central['country']; ?></p>
+                            </div>
+                        </div>
+                        <div class="item__stats">
+                            <div>Матчей на евро: <?=$central['games']; ?>
+                            </div>
+                            <div>
+                               <span>Рост: </span>
+                               <span><?= $central['height'];?>см</span>
+                            </div>
+                            <div>
+                               <span>Вес: </span>
+                               <span><?= $central['weight']; ?>кг</span>   
+                            </div>
+                        </div>
+                        <div class="item__check">
+                        <input type="radio" name="central" id="central-<?=$central['id'];?>" value="<?=$central['name'];?>">
+                        <label for="central-<?=$central['id'];?>" class="check">
+                            Выбрать
+                            
+                        </label>   
+                        </div>
+                        
+                    </div>
+                
                 <?php endforeach; ?>
                 
             </div>
         </div>
         <div class="tab hidden">
         <div><h2>Выберите лучшего защитника</h2></div>
-            <div class="tab__radio-list">
+        <div class="tab__radio-list">
                 <?php  foreach($defs as $def) :?>
-                <label for="def-<?=$def['id'];?>" class="check">        
+                     
                     <div class="tab__radio-item">
+                        
+                        <div class="item__img">
+                            <img src="/src/img/def-<?=$def['img'];?>.jpg" alt="">
+                        </div>
+                        <div class="item__info">
+                            <h3><?=$def['name']; ?></h3>
+                            <div class="item__country">
+                                <img src="/src/img/<?=$def['countryimg'];?>.svg" alt="">
+                                <p><?=$def['country']; ?></p>
+                            </div>
+                        </div>
+                        <div class="item__stats">
+                            <div>Матчей на евро: <?=$def['games']; ?>
+                            </div>
+                            <div>
+                               <span>Рост: </span>
+                               <span><?= $def['height'];?>см</span>
+                            </div>
+                            <div>
+                               <span>Вес: </span>
+                               <span><?= $def['weight']; ?>кг</span>   
+                            </div>
+                        </div>
+                        <div class="item__check">
                         <input type="radio" name="def" id="def-<?=$def['id'];?>" value="<?=$def['name'];?>">
-                        <img src="/src/img/def-<?=$def['img'];?>.jpg" alt="">
-                        <h3><?=$def['name']; ?></h3>
+                        <label for="def-<?=$def['id'];?>" class="check">
+                            Выбрать
+                            
+                        </label>   
+                        </div>
+                        
                     </div>
-                </label>
+                
                 <?php endforeach; ?>
                 
             </div>
         </div>
         <div class="tab hidden">
-        <div><h2>Выберите лучшего вратаря</h2></div>
+            <div>
+                <h2>Выберите лучшего вратаря</h2>
+            </div>
             <div class="tab__radio-list">
                 <?php  foreach($gks as $gk) :?>
-                <label for="gk-<?=$gk['id'];?>" class="check">
+                     
                     <div class="tab__radio-item">
+                        
+                        <div class="item__img">
+                            <img src="/src/img/gk-<?=$gk['img'];?>.jpg" alt="">
+                        </div>
+                        <div class="item__info">
+                            <h3><?=$gk['name']; ?></h3>
+                            <div class="item__country">
+                                <img src="/src/img/<?=$gk['countryimg'];?>.svg" alt="">
+                                <p><?=$gk['country']; ?></p>
+                            </div>
+                        </div>
+                        <div class="item__stats">
+                            <div>Матчей на евро: <?=$gk['games']; ?>
+                            </div>
+                            <div>
+                               <span>Рост: </span>
+                               <span><?= $gk['height'];?>см</span>
+                            </div>
+                            <div>
+                               <span>Вес: </span>
+                               <span><?= $gk['weight']; ?>кг</span>   
+                            </div>
+                        </div>
+                        <div class="item__check">
                         <input type="radio" name="gk" id="gk-<?=$gk['id'];?>" value="<?=$gk['name'];?>">
-                        <img src="/src/img/gk-<?=$gk['img'];?>.jpg" alt="">
-                        <h3><?=$gk['name']; ?></h3>                   
+                        <label for="gk-<?=$gk['id'];?>" class="check">
+                            Выбрать
+                            
+                        </label>   
+                        </div>
+                        
                     </div>
-                </label>
+                
                 <?php endforeach; ?>
                 
             </div>

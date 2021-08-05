@@ -119,6 +119,7 @@ function isUniqueVoiting(){
 
 function submitForm(formData) {
     var forms = $('#stepform')[0];
+    console.log(forms['forward']);
     var formData = new FormData(forms);
     formData.append('type', 'stepform');
 

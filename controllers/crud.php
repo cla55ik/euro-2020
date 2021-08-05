@@ -292,7 +292,7 @@ class Players{
 
     public function getForwards()
     {
-        $query = "SELECT * FROM `forward`";
+        $query = "SELECT * FROM `players` WHERE `position`='fw'";
         $stmt = $this->conn->query($query);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -311,7 +311,7 @@ class Players{
 
     public function getCentrals()
     {
-        $query = "SELECT * FROM `central`";
+        $query = "SELECT * FROM `players` WHERE `position`='cm'";
         $stmt = $this->conn->query($query);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -330,7 +330,7 @@ class Players{
 
     public function getDefs()
     {
-        $query = "SELECT * FROM `def`";
+        $query = "SELECT * FROM `players` WHERE `position`='df'";
         $stmt = $this->conn->query($query);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -349,7 +349,7 @@ class Players{
 
     public function getGks()
     {
-        $query = "SELECT * FROM `gk`";
+        $query = "SELECT * FROM `players` WHERE `position`='gk'";
         $stmt = $this->conn->query($query);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

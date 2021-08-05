@@ -1,14 +1,15 @@
 
 @font-face {
     font-family: 'Bridge Type';
-    src: url('/dist/fonts/BridgeTypeEuro2020.ttf') format('truetype');
+    src: url('/src/fonts/BridgeTypeEuro2020.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 body{
     font-family: 'Bridge Type';
-    margin:0 20px;
+    max-width: 1200px;
+    margin:0 auto;
     background-color: #439AB1;
 
 }
@@ -54,9 +55,7 @@ button{
 }
 
 .tab__radio-list{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    
 }
 
 
@@ -67,11 +66,23 @@ label.check{
 }
 
 .tab__radio-item h3{
+    font-size: 24px;
     letter-spacing: 0.05em;
+    margin-bottom: 0px;
 }
 
 .tab__radio-item{
+    background-color: rgba(0,0,0,.4);
+    border-radius: 15px;
+    padding: 25px 40px;
+    margin-bottom: 30px;
+    display: flex;
     text-align: center;
+}
+
+.tab__radio-item:hover {
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    background-color: rgba(0,0,0,.55); 
 }
 
 input[type="radio"]{
@@ -81,6 +92,21 @@ input[type="radio"]{
 .tab__radio-item img{
     border-radius: 500px;
 }
+
+
+.item__info{
+    width: 25%;
+    text-align: left;
+    margin: 0 50px;
+}
+
+.item__stats{
+    text-align: left;
+    margin-top: 64px;
+    color: #fff;
+    width: 25%;
+}
+
 
 input[type="radio" i]:checked{
     border: 2px solid #000;
@@ -113,10 +139,28 @@ button.btn{
 
 
 .voiting{
-    background-color: rgba(0,0,0,.3);
+    
     border-radius: 15px;
     padding: 35px;
 }
+
+
+
+.item__country{
+    display: flex;
+}
+
+.item__country p{
+    color: #fff;
+    margin-left: 10px;
+}
+
+.item__country img{
+    width: 20px;
+    height: auto;
+    object-fit: contain;
+}
+
 
 .tab h2, .tab h3{
     color: #fff;
@@ -139,12 +183,10 @@ button.btn-prev, button.btn-next{
 
 
 .voiting-result-wrapper{
-    background-color: rgba(0,0,0,.3);
+    
     border-radius: 15px;
     padding: 35px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    
 
 }
 
@@ -354,6 +396,7 @@ input[type="radio"]{
 
 
 .tab__radio-item img{
+    
     border: 2px solid transparent;
     transition: 650ms;
 }

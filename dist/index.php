@@ -16,8 +16,7 @@ $uid_id = session_id();
 <html lang="en" dir="ltr">
   <head>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="/src/css/style.css">
-    <link rel="shortcut icon" href="src/img/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="/dist/css/style.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
     <title>Лучшие игроки EURO 2020</title>
@@ -52,8 +51,10 @@ $uid_id = session_id();
 </div>
 
 -->
+
+
 <div class="voiting__title">
-    <img src="src/img/logo.webp" alt="">
+    <img src="dist/img/logo.webp" alt="">
     <h1>Голосование: Лучшие игроки EURO 2020</h1>
 </div>
 
@@ -76,32 +77,11 @@ $uid_id = session_id();
             <div><h2>Выберите лучшего нападающего</h2></div>
             <div class="tab__radio-list">
                 <?php  foreach($forwards as $forward) :?>
-                <label for="forward-<?=$forward['id'];?>" class="check">        
+                <label for="forward-<?=$forward['id'];?>" class="check">
                     <div class="tab__radio-item">
                         <input type="radio" name="forward" id="forward-<?=$forward['id'];?>" value="<?=$forward['name'];?>">
-                        <div class="item__img">
-                            <img src="/src/img/forward-<?=$forward['img'];?>.jpg" alt="">
-                        </div>
-                        <div class="item__info">
-                            <h3><?=$forward['name']; ?></h3>
-                            <div class="item__country">
-                                <img src="/src/img/<?=$forward['countryimg'];?>.svg" alt="">
-                                <p><?=$forward['country']; ?></p>
-                            </div>
-                        </div>
-                        <div class="item__stats">
-                            <div>Матчей на евро: <?=$forward['games']; ?>
-                            </div>
-                            <div>
-                               <span>Рост: </span>
-                               <span><?= $forward['height'];?>см</span>
-                            </div>
-                            <div>
-                               <span>Вес: </span>
-                               <span><?= $forward['weight']; ?>кг</span>   
-                            </div>
-                        </div>
-                        
+                        <img src="/src/img/forward-<?=$forward['img'];?>.jpg" alt="">
+                        <h3><?=$forward['name']; ?></h3>
                     </div>
                 </label>
                 <?php endforeach; ?>
@@ -130,8 +110,17 @@ $uid_id = session_id();
                 <label for="def-<?=$def['id'];?>" class="check">        
                     <div class="tab__radio-item">
                         <input type="radio" name="def" id="def-<?=$def['id'];?>" value="<?=$def['name'];?>">
-                        <img src="/src/img/def-<?=$def['img'];?>.jpg" alt="">
-                        <h3><?=$def['name']; ?></h3>
+                        <div class="item__img">
+                            <img src="/src/img/def-<?=$def['img'];?>.jpg" alt="">
+                        </div>
+                        <div class="item__info">
+                            <h3><?=$def['name']; ?></h3>
+                            <div class="item__country">
+                                <img src="/src/img/<?=$def['country_img'];?>.svg" alt="">
+                                <p><?=$def['country']; ?></p>
+                            </div>
+                        </div>
+                        
                     </div>
                 </label>
                 <?php endforeach; ?>
@@ -145,7 +134,7 @@ $uid_id = session_id();
                 <label for="gk-<?=$gk['id'];?>" class="check">
                     <div class="tab__radio-item">
                         <input type="radio" name="gk" id="gk-<?=$gk['id'];?>" value="<?=$gk['name'];?>">
-                        <img src="/src/img/gk-<?=$gk['img'];?>.jpg" alt="">
+                        <img src="/dist/img/gk-<?=$gk['img'];?>.jpg" alt="">
                         <h3><?=$gk['name']; ?></h3>                   
                     </div>
                 </label>

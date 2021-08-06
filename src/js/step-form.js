@@ -35,6 +35,7 @@ $("#viewresult").click(function(e){
 
 $("#viewvoiting").click(function(){
     console.log('click view');
+    document.getElementById('banner').style.display = 'none';
     document.getElementById('title_h1').classList.add('reduction');
     document.getElementById('title_h1').style.fontSize='24px';
     document.getElementById('title_h1').style.width='70%';
@@ -96,6 +97,7 @@ function isUniqueVoiting(){
             if(res.error !='') {
                 $('#message').html('Ошибка ' + res.error)
             }else if(res.status == 'notunique'){
+                
                 document.getElementById('div_btn_viewvoiting').classList.toggle('hidden');
                 document.getElementById('viewresult').style.backgroundColor = '#B6CB67';
                 document.getElementById('viewresult').style.color = '#002B31';
@@ -199,6 +201,7 @@ function viewResult() {
         data:{'type':'viewresult'},
         
         success: function (response) {
+            document.getElementById('banner').style.display = 'none';
             res = $.parseJSON(response);
             if(res.error !='') {
                 $('#message').html('Ошибка ' + res.error)
@@ -221,6 +224,10 @@ function viewResult() {
 function renderResult(res){
     if(document.getElementById('voiting_result').classList.contains('hidden')){
         document.getElementById('voiting_result').classList.toggle('hidden');
+        document.getElementById('title_h1').classList.add('reduction');
+        document.getElementById('title_h1').style.fontSize='24px';
+        document.getElementById('title_h1').style.width='70%';
+        document.getElementById('title_h1').style.margin='0 auto';
         document.getElementById('viewresult').innerHTML='Скрыть результат';
 
         let forward_countryimg = '/src/img/' + res.forward_countryimg + '.svg';

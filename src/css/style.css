@@ -20,7 +20,8 @@ body{
     font-family: 'PF BeauSans Pro';
     max-width: 1200px;
     margin:0 auto;
-    background-color: #439AB1;
+    /*background-color: #439AB1;*/
+    background: url(/src/img/bg3-min.jpg);
 
 }
 
@@ -49,7 +50,7 @@ button{
 }
 
 .voiting__title h1{
-    color: #eee;
+    color: #fff;
     font-size: 50px;
 }
 
@@ -57,6 +58,16 @@ button{
     width: 70px;
     height: auto;
     object-fit: contain;
+}
+
+.banner{
+    text-align: center;
+    margin: 0 auto;
+    
+}
+.banner img{
+    margin-top: -80px;
+    max-width: 550px;
 }
 
 
@@ -67,6 +78,8 @@ button{
 }
 
 .control{
+    position: relative;
+    z-index: 100;
     margin-top: 50px;
     margin-bottom: 20px;
 }
@@ -374,6 +387,9 @@ body{
 
 @media (max-width: 750px){
 
+    .banner img{
+        max-width: 70%;
+    }
 
     .voiting__title h1{
         font-size: 42px;

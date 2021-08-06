@@ -67,6 +67,9 @@ $uid_id = session_id();
         <button class="btn" id="viewresult">Показать результаты</button>
     </div>
 </div>
+<div id="banner" class="banner">
+    <img src="/src/img/player-min.png" alt="">
+</div>
 
 <div class="voiting hidden" id="voiting">
 

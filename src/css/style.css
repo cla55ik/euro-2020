@@ -178,6 +178,41 @@ button.btn:hover{
 }
 */
 
+.slide-up{
+    
+    animation-name: slideUp;
+    -webkit-animation-name: slideUp;  
+ 
+    animation-duration: 3s; 
+    -webkit-animation-duration: 3s;
+ 
+    animation-timing-function: ease-in-out; 
+    -webkit-animation-timing-function: ease-in-out;
+}
+
+.reduction{
+    animation-name: reduction;
+    -webkit-animation-name: reduction;  
+ 
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+ 
+    animation-timing-function: ease-in-out; 
+    -webkit-animation-timing-function: ease-in-out;
+}
+
+@keyframes reduction {
+    from{
+        font-size: 42px;
+    }
+
+    to{
+        font-size: 24px;
+    }
+}
+
+
+
 
 @keyframes fade-in{
     0%   { opacity: 0; }
@@ -188,6 +223,29 @@ button.btn:hover{
     0%   { opacity: 1; }
     100% { opacity: 0; }
 }
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(150%);
+    }
+    50%{
+        transform: translateY(-8%);
+    }
+    65%{
+        transform: translateY(4%);
+    }
+    80%{
+        transform: translateY(-4%);
+    }
+    95%{
+        transform: translateY(2%);
+    }           
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
 
 @keyframes slideLeft {
     0% {

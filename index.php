@@ -55,11 +55,11 @@ $uid_id = session_id();
 -->
 <div class="voiting__title">
     <img src="src/img/logo.webp" alt="">
-    <h1>Голосование: Лучшие игроки EURO 2020</h1>
+    <h1 id="title_h1">Голосование: Лучшие игроки EURO 2020</h1>
 </div>
 
 
-<div class="control">
+<div class="control" id="control">
     <div class="control__button" id="div_btn_viewvoiting">
         <button class="btn" id="viewvoiting">Проголосовать</button>
     </div>
@@ -247,7 +247,7 @@ $uid_id = session_id();
                 
             </div>
         </div>
-        <div class="form__control">
+        <div class="form__control" id="form_control">
             <button class="btn-prev" type="button" id="prevBtn" onclick="nextPrev(-1)">Назад</button>
             <button class="btn-next" type="button" id="nextBtn" onclick="nextPrev(1)">Далее</button>
         </div>

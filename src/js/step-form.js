@@ -35,6 +35,10 @@ $("#viewresult").click(function(e){
 
 $("#viewvoiting").click(function(){
     console.log('click view');
+    document.getElementById('title_h1').classList.add('reduction');
+    document.getElementById('title_h1').style.fontSize='24px';
+    document.getElementById('title_h1').style.width='70%';
+    document.getElementById('title_h1').style.margin='0 auto';
     isUniqueVoiting();
    
     
@@ -101,6 +105,9 @@ function isUniqueVoiting(){
                 document.getElementById('voiting').classList.remove('hidden');
                 document.getElementById('div_btn_viewvoiting').classList.toggle('hidden');
                 document.getElementById('div_btn_viewresult').classList.add('hidden');
+                document.getElementById('control').style.margin = '0';
+                document.getElementById('form_control').classList.add('slide-up');
+                //setTimeout(() => document.getElementById('form_control').classList.add('slide-up'), 1000);
                 showTab(currentTab);
                 console.log('is unique');
                 //submitForm(formData);
@@ -136,10 +143,13 @@ function submitForm(formData) {
                 $('#message').html('Ошибка ' + res.error)
             }else{
                 $('#message').html(res.message)
+                document.getElementById('control').style.marginTop = '50px';
+                document.getElementById('control').style.marginBottom = '20px';
                 document.getElementById('div_btn_viewresult').classList.remove('hidden');
                 document.getElementById('div_btn_viewresult').style.width = '100%';
                 document.getElementById('viewresult').style.color = '#002B31';
                 document.getElementById('viewresult').style.backgroundColor = '#B6CB67';
+                
             }
             
         },

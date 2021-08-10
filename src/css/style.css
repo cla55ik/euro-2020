@@ -93,7 +93,7 @@ button{
 
 button.btn{
     font-size: 1.5rem;
-    background: rgba(0,0,0,.3);
+    background: rgba(0,0,0,.9);
     color: #fff;
     border: none;
     border-radius: 10px;
